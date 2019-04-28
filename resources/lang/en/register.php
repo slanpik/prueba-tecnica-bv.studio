@@ -4,5 +4,6 @@
 
 return [
     'error' => 'Fix the following errors',
-    'success' => 'Added new user.'
+    'success' => 'Added new user.',
+    'submit' => 'Submit'
 ];

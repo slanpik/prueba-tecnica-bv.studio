@@ -46,4 +46,33 @@ class User extends Authenticatable
     $user->save();
   }
 
+    /**
+     * Guardar el nombre en minúscula
+     * @param firstName
+    */
+
+    public function setFirstNameAttribute($valor)
+    {
+        $this->attributes['firstName'] = strtolower($valor);
+    }
+    /**
+     * Guardar el apellido en minúscula
+     * @param lastName
+    */
+
+    public function setLastNameAttribute($valor)
+    {
+        $this->attributes['lastName'] = strtolower($valor);
+    }
+
+    /**
+     * Guardar el email en minúscula
+     * @param email
+    */
+    public function setEmailAttribute($valor)
+    {
+        $this->attributes['email'] = strtolower($valor);
+    }
+
+
 }

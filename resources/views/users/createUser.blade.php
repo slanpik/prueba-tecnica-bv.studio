@@ -61,11 +61,12 @@
             </div>
         </div>
 
-        <div class="form-group col-md-8">
+        {{-- Div para el captcha --}}
+        {{-- <div class="form-group col-md-8">
                 {!! Recaptcha::render() !!}
-            </div>
+            </div> --}}
 
-        <button type="submit" id="submitForm" class="btn btn-outline-primary btn-lg btn-block">@lang('register.error')</button>
+        <button type="submit" id="submitForm" class="btn btn-outline-primary btn-lg btn-block">@lang('register.submit')</button>
     </form>
 
 @endsection
@@ -85,10 +86,16 @@
             var email = $("input[name='email']").val();
 
 
+
             $.ajax({
                 url: "/save",
                 type:'POST',
-                data: {_token:_token, firstName:firstName, lastName:lastName, email:email},
+                data: {
+                    _token:_token, 
+                    firstName:firstName, 
+                    lastName:lastName, 
+                    email:email
+                },
                 success: function(data) {
                     // si no hay error, muestro un mensaje de creacion
                     if($.isEmptyObject(data.error)){

@@ -4,5 +4,6 @@
 
 return [
     'error' => 'Corrigue los siguientes errores',
-    'success' => 'Se creo un usuario'
+    'success' => 'Se creo un usuario',
+    'submit' => 'Enviar'
 ];

@@ -46,7 +46,7 @@ class UserController extends Controller
         $validator = Validator::make($inputs, [
             'firstName' => 'required|string',
             'email' => 'required|email|string',
-            'g-recaptcha-response' => 'required|recaptcha', 
+            // 'g-recaptcha-response' => 'required|recaptcha', 
         ]);
 
         // Si pasa la validación guardamos el usuario.
@@ -71,8 +71,6 @@ class UserController extends Controller
 
         return response()->json(['error' => $validator->errors()]);
 
-
-        // return redirect(route('user.showAllUsers'));
     }
 
      /**

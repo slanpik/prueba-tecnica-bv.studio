@@ -36,7 +36,10 @@
     <footer class=" color-used footer">
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3"> ▲▼ 2019 Francisco Sánchez ▼▲ </div>
+            <div class="footer-copyright text-center py-3"> 
+                ▲▼ 2019 Francisco Sánchez -
+                <a target="_blank" href="https://testbv.000webhostapp.com/"> Sitio Web para pruebas de captcha</a> ▼▲ 
+            </div>
 
           
     </footer>
