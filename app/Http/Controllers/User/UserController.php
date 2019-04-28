@@ -44,8 +44,8 @@ class UserController extends Controller
 
         /** @var validator realizamos la validacion para comprobar todos los campos de la peticion */
         $validator = Validator::make($inputs, [
-            'firstName' => 'required',
-            'email' => 'required|email',
+            'firstName' => 'required|string',
+            'email' => 'required|email|string',
             'g-recaptcha-response' => 'required|recaptcha', 
         ]);
 
