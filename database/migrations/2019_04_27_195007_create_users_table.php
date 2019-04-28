@@ -15,11 +15,20 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('first_name', 100);
-            $table->string('last_name', 100)->nullable();
+            $table->string('firstName', 100);
+            $table->string('lastName', 100)->nullable();
             $table->string('email', 300);
             $table->timestamps();
         });
     }
 
     /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('users');
+    }
+}

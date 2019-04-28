@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4731429c7f25ab92eaa813447a972209",
+    "content-hash": "f34c785c283d3a9a57108c154934073e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -370,6 +370,58 @@
                 "trusted proxy"
             ],
             "time": "2019-01-10T14:06:47+00:00"
+        },
+        {
+            "name": "greggilbert/recaptcha",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/greggilbert/recaptcha.git",
+                "reference": "c2ed383785a4fe20467ce470c97c303e5c5b85de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/c2ed383785a4fe20467ce470c97c303e5c5b85de",
+                "reference": "c2ed383785a4fe20467ce470c97c303e5c5b85de",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-4": {
+                    "Greggilbert\\Recaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Gilbert",
+                    "email": "greg@greg-gilbert.com"
+                }
+            ],
+            "description": "reCAPTCHA Validator for Laravel 5",
+            "homepage": "http://github.com/greggilbert/recaptcha",
+            "keywords": [
+                "captcha",
+                "laravel",
+                "laravel5",
+                "recaptcha"
+            ],
+            "time": "2017-08-31T03:39:47+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -833,16 +885,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.17.0",
+            "version": "2.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "9b49d637ad009e5e211142bc7492adcb19dbd645"
+                "reference": "96acbc0c03782e8115156dd4dd8b736267155066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/9b49d637ad009e5e211142bc7492adcb19dbd645",
-                "reference": "9b49d637ad009e5e211142bc7492adcb19dbd645",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/96acbc0c03782e8115156dd4dd8b736267155066",
+                "reference": "96acbc0c03782e8115156dd4dd8b736267155066",
                 "shasum": ""
             },
             "require": {
@@ -889,7 +941,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-04-17T08:51:36+00:00"
+            "time": "2019-04-27T18:04:27+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2632,6 +2684,77 @@
                 "environment"
             ],
             "time": "2019-03-06T09:39:45+00:00"
+        },
+        {
+            "name": "yajra/laravel-datatables-oracle",
+            "version": "v9.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "1fc2ca80b867441a6717b15684f78a3670427c94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/1fc2ca80b867441a6717b15684f78a3670427c94",
+                "reference": "1fc2ca80b867441a6717b15684f78a3670427c94",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.8.*",
+                "illuminate/filesystem": "5.8.*",
+                "illuminate/http": "5.8.*",
+                "illuminate/support": "5.8.*",
+                "illuminate/view": "5.8.*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.8"
+            },
+            "suggest": {
+                "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTables.",
+                "yajra/laravel-datatables-editor": "Plugin to use DataTables Editor (requires a license).",
+                "yajra/laravel-datatables-fractal": "Plugin for server-side response using Fractal.",
+                "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTables."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\DataTablesServiceProvider"
+                    ],
+                    "aliases": {
+                        "DataTables": "Yajra\\DataTables\\Facades\\DataTables"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\DataTables\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "jQuery DataTables API for Laravel 4|5",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "time": "2019-04-26T08:38:28+00:00"
         }
     ],
     "packages-dev": [
@@ -4401,11 +4524,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "greggilbert/recaptcha": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3"
+        "php": "^7.2"
     },
     "platform-dev": []
 }

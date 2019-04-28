@@ -3,37 +3,47 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 
 class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'users';
+
     /**
      * The attributes that are mass assignable.
-     *
-     * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
+    protected $fillable = [ 
+        'firstName', 'lastName', 'email'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $guarded = ['id'];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+/**
+  * Se usa para guardar el usuario en la base de datos
+  *
+  * @param request es el dato que posee todos los campos de la vista
+  * @param idUser es la id del usuario que se desea modificar
+  *
+  */
+  public static function saveUser($request, $idUser = null)
+  {
+
+    //Se analiza el tipo de metodo es usado en la ruta si es post o put
+    if($request->isMethod('post')){
+      $user = new User();
+    }
+    
+    //guarda el dato en la base de datos
+    $user->firstName = $request['firstName'];
+    $user->lastName = $request['lastName'];
+    $user->email = $request['email'];
+
+    
+    $user->save();
+  }
+
 }
