@@ -44,6 +44,10 @@ _Se utilizo para el proyecto el sistema de traducciones de laravel (@lang()) par
 
 _Las rutas son personalizadas y no se usa ninguna ruta del resource._
 
+## Prueba del software
+
+https://testbv.000webhostapp.com
+
 ## Autores ✒️
 
 **Francisco Sanchez**
